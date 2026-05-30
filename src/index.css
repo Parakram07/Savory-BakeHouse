@@ -1,0 +1,466 @@
+/* ==========================================================================
+   SAVORY BAKEHOUSE - Core Design System & Global CSS
+   Designed by Antigravity (Senior Frontend Developer & UI/UX Designer)
+   ========================================================================== */
+
+/* --- Design Tokens --- */
+:root {
+  /* Brand HSL Colors */
+  --primary-purple-h: 308;
+  --primary-purple-s: 58%;
+  --primary-purple-l: 39%;
+  --primary-purple: hsl(var(--primary-purple-h), var(--primary-purple-s), var(--primary-purple-l)); /* #9E2A8C */
+  
+  --secondary-gold-h: 44;
+  --secondary-gold-s: 100%;
+  --secondary-gold-l: 59%;
+  --secondary-gold: hsl(var(--secondary-gold-h), var(--secondary-gold-s), var(--secondary-gold-l)); /* #FFC72C */
+  
+  --fresh-green-h: 148;
+  --fresh-green-s: 100%;
+  --fresh-green-l: 31%;
+  --fresh-green: hsl(var(--fresh-green-h), var(--fresh-green-s), var(--fresh-green-l)); /* #009E49 */
+
+  /* Neutral Backgrounds */
+  --bg-cream: #FFFDF6;     /* Super warm cream background */
+  --bg-beige: #FAF5EC;     /* Deeper beige for alternating sections */
+  --bg-card: #FFFFFF;      /* Clean pure white for high contrast cards */
+  --bg-dark: #1F1614;      /* Deep roasted cocoa for dark elements */
+
+  /* Neutral Typography */
+  --text-heading: #2D1E1B; /* Dark roasted chocolate */
+  --text-body: #5C4E4B;    /* Warm slate gray for comfortable reading */
+  --text-muted: #8C7D7A;   /* Soft brownish-gray for meta-info */
+  --text-light: #FFFFFF;   /* Pure white text */
+
+  /* Borders & Shadows */
+  --border-light: rgba(158, 42, 140, 0.08);
+  --border-medium: rgba(158, 42, 140, 0.15);
+  --border-focus: rgba(158, 42, 140, 0.4);
+  
+  --shadow-sm: 0 4px 6px -1px rgba(45, 30, 27, 0.03), 0 2px 4px -1px rgba(45, 30, 27, 0.02);
+  --shadow-md: 0 10px 20px -3px rgba(45, 30, 27, 0.06), 0 4px 6px -2px rgba(45, 30, 27, 0.04);
+  --shadow-lg: 0 20px 40px -5px rgba(45, 30, 27, 0.12), 0 8px 16px -4px rgba(45, 30, 27, 0.06);
+  --shadow-glow: 0 0 25px rgba(255, 199, 44, 0.45);
+
+  /* Fonts */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-nepali: 'Mukta', 'Poppins', sans-serif;
+
+  /* Transitions & Utilities */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --container-width: 1280px;
+}
+
+/* --- Base Resets & Global Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-cream);
+  color: var(--text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary-purple-h), var(--primary-purple-s), 50%);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-beige);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-purple);
+}
+
+/* --- Typography & Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-heading);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+/* Styled highlights and taglines */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-purple {
+  color: var(--primary-purple);
+}
+
+.text-gold {
+  color: var(--secondary-gold);
+}
+
+.text-green {
+  color: var(--fresh-green);
+}
+
+.tagline-nepali {
+  font-family: var(--font-nepali);
+  color: var(--fresh-green);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+/* --- Layout Utilities --- */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.section-bg-beige {
+  background-color: var(--bg-beige);
+}
+
+.section-bg-cream {
+  background-color: var(--bg-cream);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem auto;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Elegant wheat-themed decorative separator */
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-purple), var(--secondary-gold));
+  margin: 0.75rem auto 0 auto;
+  border-radius: var(--radius-full);
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* --- Responsive Flex & Grid Systems --- */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.gap-12 { gap: 3rem; }
+
+/* --- Premium Custom Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-purple);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-purple);
+  border-color: var(--primary-purple);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-gold);
+  color: var(--text-heading);
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: var(--primary-purple);
+  border-color: var(--primary-purple);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-purple);
+  border-color: var(--primary-purple);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-purple);
+  color: var(--text-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white {
+  background-color: var(--text-light);
+  color: var(--text-heading);
+}
+
+.btn-white:hover {
+  background-color: var(--primary-purple);
+  color: var(--text-light);
+  transform: translateY(-3px);
+}
+
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* --- Card Styles & Hover Effects --- */
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-purple), var(--secondary-gold));
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-medium);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* --- Form Controls & Floating Labels --- */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-medium);
+  background-color: var(--bg-cream);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-heading);
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--primary-purple);
+  background-color: var(--bg-card);
+  box-shadow: 0 0 0 4px rgba(158, 42, 140, 0.1);
+}
+
+.form-label {
+  position: absolute;
+  left: 1.25rem;
+  top: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  top: -0.6rem;
+  left: 1rem;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  background-color: var(--bg-card);
+  color: var(--primary-purple);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+textarea.form-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* --- Custom Glassmorphic Navigation Menu --- */
+.glass-nav {
+  background-color: rgba(255, 253, 246, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(158, 42, 140, 0.05);
+}
+
+/* --- Keyframe Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shiver {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-bounce-soft {
+  animation: bounceSoft 3s ease-in-out infinite;
+}
+
+/* --- Responsive Media Queries (Mobile First) --- */
+
+/* Tablets (Portrait & Landscape) */
+@media (max-width: 1024px) {
+  :root {
+    font-size: 15px;
+  }
+  
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .grid-cols-4, .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid-cols-4, .grid-cols-3, .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .gap-12 {
+    gap: 2rem;
+  }
+}
