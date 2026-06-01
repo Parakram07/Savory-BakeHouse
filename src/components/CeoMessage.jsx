@@ -26,7 +26,7 @@ const CeoMessage = () => {
           </span>
           <h2>A Message From Our CEO</h2>
           <p>
-            Understand the heart, passion, and values that guide our stone ovens in Nadipur, Pokhara.
+            Understand the heart, passion, and values that guide our stone ovens.
           </p>
         </div>
 

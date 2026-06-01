@@ -95,17 +95,6 @@ export const products = [
     badgeType: 'green',
     isPopular: true
   },
-  {
-    id: 'b2',
-    name: 'Nadipur Honey & Oat Bread',
-    category: 'breads',
-    price: 'Rs. 280',
-    description: 'Soft and wholesome sandwich loaf baked with local Pokhara honey, organic whole wheat flour, and rolled oats for a sweet, textured crust.',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80',
-    badge: 'Local Honey',
-    badgeType: 'gold',
-    isPopular: false
-  },
 
   // Cookies & Cupcakes
   {
@@ -130,28 +119,4 @@ export const products = [
     badgeType: 'gold',
     isPopular: false
   },
-
-  // Custom Celebrations
-  {
-    id: 's1',
-    name: 'Fishtail Peak Wedding Cake',
-    category: 'celebration',
-    price: 'On Request',
-    description: 'A multi-tier masterpiece decorated with custom hand-carved sugar flowers and gold foil elements, capturing the majesty of the Annapurna range.',
-    image: 'https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&auto=format&fit=crop&q=80',
-    badge: 'Custom Order',
-    badgeType: 'purple',
-    isPopular: true
-  },
-  {
-    id: 's2',
-    name: 'Dreamy Birthday Wonderland Cake',
-    category: 'celebration',
-    price: 'Rs. 2,200 / Kg',
-    description: 'Choose your custom base flavor and themes! We bring cartoon characters, floral fantasy, or minimalist modern designs to life.',
-    image: 'https://images.unsplash.com/photo-1558961309-dbdf000a1291?w=600&auto=format&fit=crop&q=80',
-    badge: 'Handcrafted',
-    badgeType: 'gold',
-    isPopular: true
-  }
 ];

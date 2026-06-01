@@ -221,7 +221,7 @@ const Footer = () => {
                 }}>
                   <MapPin size={16} />
                 </div>
-                <span style={{ lineHeight: 1.5 }}>Nadipur-3, Pokhara,<br />Gandaki Province, Nepal</span>
+                <span style={{ lineHeight: 1.5 }}>Nadipur-3, Pokhara, Nepal</span>
               </li>
               <li style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>
                 <div style={{
@@ -237,7 +237,7 @@ const Footer = () => {
                 }}>
                   <Phone size={16} style={{ color: 'var(--text-heading)' }} />
                 </div>
-                <span>+977-61-530124, 9856032145</span>
+                <span>+977-9867667837</span>
               </li>
               <li style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>
                 <div style={{
@@ -253,7 +253,7 @@ const Footer = () => {
                 }}>
                   <Mail size={16} />
                 </div>
-                <span style={{ fontSize: '0.88rem' }}>hello@savorybakehouse.com</span>
+                <span style={{ fontSize: '0.88rem' }}>info@savorybakehouse.com</span>
               </li>
             </ul>
           </div>

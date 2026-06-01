@@ -85,8 +85,7 @@ const Contact = () => {
                     Our Location
                   </h4>
                   <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                    Nadipur-3, Pokhara, <br />
-                    Nepal (Opposite Main Gate)
+                    Nadipur-3, Pokhara, Nepal
                   </p>
                 </div>
               </div>
@@ -101,8 +100,7 @@ const Contact = () => {
                     Phone Numbers
                   </h4>
                   <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                    +977-61-530124 <br />
-                    +977-9856032145
+                    +977-9867667837
                   </p>
                 </div>
               </div>
@@ -117,8 +115,7 @@ const Contact = () => {
                     Email Address
                   </h4>
                   <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-body)', lineHeight: 1.4 }} className="email-link">
-                    hello@savorybakehouse.com
-                    info@savorybake.com
+                    info@savorybakehouse.com
                   </p>
                 </div>
               </div>
