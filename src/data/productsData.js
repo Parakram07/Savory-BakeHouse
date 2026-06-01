@@ -7,8 +7,7 @@ export const productCategories = [
   { id: 'cakes', label: 'Artisanal Cakes' },
   { id: 'pastries', label: 'French Pastries' },
   { id: 'breads', label: 'Rustic Breads' },
-  { id: 'cookies', label: 'Cookies & Cupcakes' },
-  { id: 'celebration', label: 'Custom Celebration Cakes' }
+  { id: 'cookies', label: 'Cookies & Cupcakes' }
 ];
 
 export const products = [

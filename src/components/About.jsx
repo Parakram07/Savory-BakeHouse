@@ -187,7 +187,7 @@ const About = () => {
             </h2>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '1.25rem', lineHeight: 1.7 }}>
-              Nestled in the serene locality of Nadipur-3, Pokhara, Savory BakeHouse is born out of a simple, beautiful passion: to revive the rich, honest art of traditional stone-oven baking. We believe that true quality takes time, focus, and a deep connection to our local community.
+              Nestled in the serene locality of Nadipur, Pokhara, Savory BakeHouse is born out of a simple, beautiful passion: to revive the rich, honest art of traditional stone-oven baking. We believe that true quality takes time, focus, and a deep connection to our local community.
             </p>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '2rem', lineHeight: 1.7 }}>
