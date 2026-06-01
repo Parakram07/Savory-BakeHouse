@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer 
+    <footer
       style={{
         background: 'linear-gradient(135deg, #150D0C 0%, #291225 100%)',
         color: '#FAF5EC',
@@ -84,10 +84,10 @@ const Footer = () => {
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        
+
         {/* Main Footer Grid */}
-        <div 
-          style={{ 
+        <div
+          style={{
             display: 'grid',
             gridTemplateColumns: '1.2fr 0.8fr 1fr 1fr',
             gap: '3rem',
@@ -97,29 +97,29 @@ const Footer = () => {
           }}
           className="footer-grid"
         >
-          
+
           {/* Column 1: Brand details & hours */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            
+
             {/* Elegant logo wrapper */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-              <img 
-                src={logoWhiteImg} 
-                alt="Savory BakeHouse Logo" 
-                style={{ 
-                  height: '90px', 
-                  width: '90px', 
+              <img
+                src={logoWhiteImg}
+                alt="Savory BakeHouse Logo"
+                style={{
+                  height: '90px',
+                  width: '90px',
                   objectFit: 'contain'
-                }} 
+                }}
               />
-              <img 
-                src={savoryTypoWhite} 
-                alt="Savory BakeHouse" 
-                style={{ 
-                  height: '100px', 
-                  width: 'auto', 
+              <img
+                src={savoryTypoWhite}
+                alt="Savory BakeHouse"
+                style={{
+                  height: '100px',
+                  width: 'auto',
                   objectFit: 'contain'
-                }} 
+                }}
               />
             </div>
 
@@ -128,7 +128,7 @@ const Footer = () => {
             </p>
 
             {/* Glowing Hours Badge */}
-            <div style={{ 
+            <div style={{
               backgroundColor: 'rgba(255, 199, 44, 0.04)',
               border: '1px solid rgba(255, 199, 44, 0.08)',
               borderRadius: 'var(--radius-md)',
@@ -153,12 +153,12 @@ const Footer = () => {
 
           {/* Column 2: Navigation Links */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
-            <h4 style={{ 
-              color: '#FFFFFF', 
-              fontSize: '0.95rem', 
-              fontWeight: 800, 
-              textTransform: 'uppercase', 
-              letterSpacing: '1.5px', 
+            <h4 style={{
+              color: '#FFFFFF',
+              fontSize: '0.95rem',
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              letterSpacing: '1.5px',
               fontFamily: 'var(--font-sans)',
               borderLeft: '3px solid var(--secondary-gold)',
               paddingLeft: '0.75rem',
@@ -166,38 +166,38 @@ const Footer = () => {
             }}>
               Quick Navigation
             </h4>
-            
+
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.95rem' }}>
-                 {[ 
-                   { id: 'home', label: 'Home Page' },
-                   { id: 'about', label: 'About Our Story' },
-                   { id: 'products', label: 'Bakery Products' },
-                   { id: 'why-choose-us', label: 'Why Choose Us' },
-                   { id: 'contact', label: 'Contact Us' }
-                 ].map((link) => (
-                  <li key={link.id}>
-                    <a
-                      href={`#${link.id}`}
-                      onClick={(e) => { e.preventDefault(); handleLinkClick(link.id); }}
-                      style={{ color: 'rgba(250,245,236,0.7)', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
-                      className="footer-link-premium"
-                    >
-                      <span className="bullet-arrow" style={{ color: 'var(--secondary-gold)', opacity: 0, width: 0, transition: 'var(--transition-fast)' }}>›</span>
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
+              {[
+                { id: 'home', label: 'Home Page' },
+                { id: 'about', label: 'About Our Story' },
+                { id: 'products', label: 'Bakery Products' },
+                { id: 'why-choose-us', label: 'Why Choose Us' },
+                { id: 'contact', label: 'Contact Us' }
+              ].map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => { e.preventDefault(); handleLinkClick(link.id); }}
+                    style={{ color: 'rgba(250,245,236,0.7)', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+                    className="footer-link-premium"
+                  >
+                    <span className="bullet-arrow" style={{ color: 'var(--secondary-gold)', opacity: 0, width: 0, transition: 'var(--transition-fast)' }}>›</span>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Column 3: Contact details */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
-            <h4 style={{ 
-              color: '#FFFFFF', 
-              fontSize: '0.95rem', 
-              fontWeight: 800, 
-              textTransform: 'uppercase', 
-              letterSpacing: '1.5px', 
+            <h4 style={{
+              color: '#FFFFFF',
+              fontSize: '0.95rem',
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              letterSpacing: '1.5px',
               fontFamily: 'var(--font-sans)',
               borderLeft: '3px solid var(--primary-purple)',
               paddingLeft: '0.75rem',
@@ -260,12 +260,12 @@ const Footer = () => {
 
           {/* Column 4: Premium Stylized Google Map */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: 'left' }}>
-            <h4 style={{ 
-              color: '#FFFFFF', 
-              fontSize: '0.95rem', 
-              fontWeight: 800, 
-              textTransform: 'uppercase', 
-              letterSpacing: '1.5px', 
+            <h4 style={{
+              color: '#FFFFFF',
+              fontSize: '0.95rem',
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              letterSpacing: '1.5px',
               fontFamily: 'var(--font-sans)',
               borderLeft: '3px solid var(--fresh-green)',
               paddingLeft: '0.75rem',
@@ -273,7 +273,7 @@ const Footer = () => {
             }}>
               Find Us On Map
             </h4>
-            
+
             {/* Embedded Stylized Map Container */}
             <div style={{
               background: 'rgba(255, 255, 255, 0.02)',
@@ -283,18 +283,18 @@ const Footer = () => {
               boxShadow: 'var(--shadow-sm)',
               overflow: 'hidden'
             }}>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.659616091398!2d83.98779951167664!3d28.21768487578761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595b28d022137%3A0xa19cf2e2cd1e86a0!2sNadipur%2C%20Pokhara%2033700!5e0!3m2!1sen!2snp!4v1716945890000!5m2!1sen!2snp" 
-                width="100%" 
-                height="150" 
-                style={{ 
-                  border: 0, 
-                  borderRadius: '10px', 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.142628545023!2d83.9894053!3d28.2345519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959443ccb08669%3A0xf289d0b8443f6d24!2sSavory%20Bakehouse!5e1!3m2!1sen!2snp!4v1780309177381!5m2!1sen!2snp"
+                width="100%"
+                height="150"
+                style={{
+                  border: 0,
+                  borderRadius: '10px',
                   display: 'block',
                   filter: 'invert(90%) hue-rotate(180deg) grayscale(10%) contrast(90%) opacity(80%)'
-                }} 
-                allowFullScreen="" 
-                loading="lazy" 
+                }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Savory BakeHouse Google Map Location"
               />
@@ -303,25 +303,25 @@ const Footer = () => {
             {/* Luxury floating social handles */}
             <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.5rem' }}>
               {[
-                { 
-                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>, 
-                  label: 'Facebook', 
-                  url: 'https://facebook.com/' 
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>,
+                  label: 'Facebook',
+                  url: 'https://facebook.com/'
                 },
-                { 
-                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>, 
-                  label: 'Instagram', 
-                  url: 'https://instagram.com/' 
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>,
+                  label: 'Instagram',
+                  url: 'https://instagram.com/'
                 },
-                { 
-                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>, 
-                  label: 'Twitter', 
-                  url: 'https://twitter.com/' 
+                {
+                  icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>,
+                  label: 'Twitter',
+                  url: 'https://twitter.com/'
                 },
-                { 
-                  icon: <MessageSquare size={18} />, 
-                  label: 'WhatsApp', 
-                  url: 'https://wa.me/9779856032145' 
+                {
+                  icon: <MessageSquare size={18} />,
+                  label: 'WhatsApp',
+                  url: 'https://wa.me/9779856032145'
                 }
               ].map((social, i) => (
                 <a
@@ -354,7 +354,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom copyright details & beat micro-animations */}
-        <div 
+        <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',

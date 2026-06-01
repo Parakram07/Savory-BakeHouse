@@ -29,10 +29,10 @@ const Contact = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
-      
+
       // Log for compliance
       console.log('Savory BakeHouse - Contact Form Submission:', formState);
-      
+
       // Reset form
       setFormState({
         name: '',
@@ -47,14 +47,14 @@ const Contact = () => {
   return (
     <section id="contact" className="section section-bg-cream" style={{ overflow: 'hidden' }}>
       <div className="container">
-        
+
         {/* Section Header */}
         <div className="section-header">
-          <span style={{ 
-            fontWeight: 700, 
-            fontSize: '0.9rem', 
-            color: 'var(--primary-purple)', 
-            textTransform: 'uppercase', 
+          <span style={{
+            fontWeight: 700,
+            fontSize: '0.9rem',
+            color: 'var(--primary-purple)',
+            textTransform: 'uppercase',
             letterSpacing: '2px',
             display: 'inline-block',
             marginBottom: '0.5rem'
@@ -68,13 +68,13 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-12" style={{ alignItems: 'flex-start' }}>
-          
+
           {/* Contact Left Panel - Details & Mock Map */}
           <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            
+
             {/* Quick Cards Grid */}
             <div className="grid grid-cols-2 gap-4 contact-info-grid">
-              
+
               {/* Address Card */}
               <div className="card" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                 <div style={{ color: 'var(--primary-purple)', padding: '0.25rem', backgroundColor: 'rgba(158,42,140,0.06)', borderRadius: '8px' }}>
@@ -139,7 +139,7 @@ const Contact = () => {
             </div>
 
             {/* Google Maps Embed */}
-            <div 
+            <div
               style={{
                 position: 'relative',
                 height: '280px',
@@ -149,15 +149,15 @@ const Contact = () => {
                 border: '1px solid var(--border-medium)'
               }}
             >
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.092053757797!2d83.99048934999999!3d28.233279699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399594415fcee6db%3A0xea49186bb677b569!2sNadipur%2C%20Pokhara%2033700!5e1!3m2!1sen!2snp!4v1780301576513!5m2!1sen!2snp"
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.142628545023!2d83.9894053!3d28.2345519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959443ccb08669%3A0xf289d0b8443f6d24!2sSavory%20Bakehouse!5e1!3m2!1sen!2snp!4v1780309177381!5m2!1sen!2snp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Savory BakeHouse - Nadipur, Pokhara Location"
+                title="Savory BakeHouse - Location"
               />
             </div>
 
@@ -165,18 +165,18 @@ const Contact = () => {
 
           {/* Contact Right Panel - High-converting Form */}
           <div className="card" style={{ padding: '3rem 2.5rem', backgroundColor: 'var(--bg-card)' }}>
-            
+
             <h3 style={{ fontSize: '1.6rem', color: 'var(--text-heading)', marginBottom: '0.5rem' }}>
               Send an Inquiry
             </h3>
-            
+
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>
               Fill out this form and our team in Nadipur will review your message and reach back to you within 2 hours!
             </p>
 
             {submitSuccess ? (
               /* Success Animation Sequence */
-              <div 
+              <div
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -190,16 +190,16 @@ const Contact = () => {
                 <div style={{ color: 'var(--fresh-green)' }}>
                   <CheckCircle size={64} />
                 </div>
-                
+
                 <h4 style={{ fontSize: '1.8rem', color: 'var(--text-heading)', fontFamily: 'var(--font-serif)', margin: 0 }}>
                   Dhanyabaad!
                 </h4>
-                
+
                 <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', margin: 0, maxWidth: '320px', lineHeight: 1.6 }}>
                   Thank you! Your message has been received with love. Our bakers in Nadipur will review your request and contact you shortly.
                 </p>
 
-                <button 
+                <button
                   className="btn btn-outline btn-sm"
                   style={{ marginTop: '1rem' }}
                   onClick={() => setSubmitSuccess(false)}
@@ -210,11 +210,11 @@ const Contact = () => {
             ) : (
               /* Core Form */
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                
+
                 {/* Name */}
                 <div className="form-group">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="name"
                     name="name"
                     value={formState.name}
@@ -229,8 +229,8 @@ const Contact = () => {
                 {/* Email & Phone side by side */}
                 <div style={{ display: 'flex', gap: '1rem' }} className="form-row">
                   <div className="form-group" style={{ flex: 1 }}>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       id="email"
                       name="email"
                       value={formState.email}
@@ -243,8 +243,8 @@ const Contact = () => {
                   </div>
 
                   <div className="form-group" style={{ flex: 1 }}>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       id="phone"
                       name="phone"
                       value={formState.phone}
@@ -273,21 +273,21 @@ const Contact = () => {
                     <option value="wholesale">Wholesale B2B Partnerships</option>
                     <option value="catering">Event/Party Catering</option>
                   </select>
-                  
+
                   {/* Styled Dropdown Chevron Arrow */}
-                  <ChevronDown 
-                    size={18} 
-                    style={{ 
-                      position: 'absolute', 
-                      right: '1.25rem', 
-                      top: '50%', 
-                      transform: 'translateY(-50%)', 
+                  <ChevronDown
+                    size={18}
+                    style={{
+                      position: 'absolute',
+                      right: '1.25rem',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
                       color: 'var(--primary-purple)',
-                      pointerEvents: 'none' 
-                    }} 
+                      pointerEvents: 'none'
+                    }}
                   />
-                  <label 
-                    htmlFor="subject" 
+                  <label
+                    htmlFor="subject"
                     className="form-label"
                     style={{
                       top: '-0.6rem',
@@ -306,7 +306,7 @@ const Contact = () => {
 
                 {/* Message */}
                 <div className="form-group">
-                  <textarea 
+                  <textarea
                     id="message"
                     name="message"
                     value={formState.message}
@@ -319,11 +319,11 @@ const Contact = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary"
-                  style={{ 
-                    marginTop: '0.5rem', 
+                  style={{
+                    marginTop: '0.5rem',
                     width: '100%',
                     position: 'relative',
                     overflow: 'hidden'
