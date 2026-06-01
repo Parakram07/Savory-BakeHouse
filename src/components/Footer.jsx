@@ -4,7 +4,8 @@
 
 import React, { useState } from 'react';
 import { MessageSquare, Send, Heart, MapPin, Phone, Mail, Clock } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+import logoWhiteImg from '../assets/logo-white.png';
+import savoryTypoWhite from '../assets/savory-typo-white.png';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -102,48 +103,24 @@ const Footer = () => {
             
             {/* Elegant logo wrapper */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-              <div style={{
-                padding: '4px',
-                backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-                <img 
-                  src={logoImg} 
-                  alt="Savory BakeHouse Logo" 
-                  style={{ 
-                    height: '52px', 
-                    width: '52px', 
-                    objectFit: 'contain',
-                    filter: 'brightness(1.05)'
-                  }} 
-                />
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
-                <span style={{ 
-                  fontFamily: 'var(--font-serif)', 
-                  fontSize: '1.5rem', 
-                  fontWeight: 800, 
-                  color: '#FFFFFF',
-                  letterSpacing: '0.5px',
-                  lineHeight: 1.1
-                }}>
-                  Savory
-                </span>
-                <span style={{ 
-                  fontSize: '0.8rem', 
-                  fontWeight: 700, 
-                  color: 'var(--secondary-gold)', 
-                  letterSpacing: '2.5px',
-                  textTransform: 'uppercase',
-                  lineHeight: 1
-                }}>
-                  BakeHouse
-                </span>
-              </div>
+              <img 
+                src={logoWhiteImg} 
+                alt="Savory BakeHouse Logo" 
+                style={{ 
+                  height: '90px', 
+                  width: '90px', 
+                  objectFit: 'contain'
+                }} 
+              />
+              <img 
+                src={savoryTypoWhite} 
+                alt="Savory BakeHouse" 
+                style={{ 
+                  height: '150px', 
+                  width: 'auto', 
+                  objectFit: 'contain'
+                }} 
+              />
             </div>
 
             <p style={{ fontSize: '0.92rem', color: 'rgba(250,245,236,0.65)', lineHeight: 1.7, margin: 0, textAlign: 'left' }}>

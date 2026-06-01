@@ -5,6 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/logo.png';
+import savoryTypo from '../assets/savory-typo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -101,30 +102,12 @@ const Navbar = () => {
               src={logoImg} 
               alt="Savory BakeHouse Logo" 
               style={{ height: '54px', width: '54px', objectFit: 'contain', transition: 'var(--transition-fast)' }} 
-              className="animate-bounce-soft"
             />
-            <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left' }}>
-              <span style={{ 
-                fontFamily: 'var(--font-serif)', 
-                fontSize: '1.4rem', 
-                fontWeight: 800, 
-                color: 'var(--text-heading)',
-                letterSpacing: '0.5px',
-                lineHeight: 1.1
-              }}>
-                Savory
-              </span>
-              <span style={{ 
-                fontSize: '0.8rem', 
-                fontWeight: 700, 
-                color: 'var(--primary-purple)', 
-                letterSpacing: '2.5px',
-                textTransform: 'uppercase',
-                lineHeight: 1
-              }}>
-                BakeHouse
-              </span>
-            </div>
+            <img
+              src={savoryTypo}
+              alt="Savory BakeHouse"
+              style={{ height: '140px', width: 'auto', objectFit: 'contain' }}
+            />
           </a>
 
           {/* 2. Desktop Navigation Links (Middle Column) */}
