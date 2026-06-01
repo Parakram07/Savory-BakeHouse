@@ -44,7 +44,7 @@ const Products = () => {
   };
 
   const handleWhatsAppInquiry = (productName) => {
-    const message = encodeURIComponent(`Hello Savory BakeHouse, I would like to inquire about ordering the "${productName}" from your Nadipur branch!`);
+    const message = encodeURIComponent(`Hello Savory BakeHouse, I would like to inquire about ordering the "${productName}" from your baking factory!`);
     const whatsappUrl = `https://wa.me/9779867667837?text=${message}`; // Placeholder contact info
     window.open(whatsappUrl, '_blank');
   };
