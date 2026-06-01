@@ -3,7 +3,7 @@
    ========================================================================== */
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ExternalLink, ChevronDown } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ChevronDown } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -141,141 +141,27 @@ const Contact = () => {
 
             </div>
 
-            {/* Premium Stylized Vector Map Mock */}
+            {/* Google Maps Embed */}
             <div 
               style={{
                 position: 'relative',
-                height: '240px',
+                height: '280px',
                 borderRadius: 'var(--radius-md)',
-                backgroundColor: 'var(--bg-beige)',
-                border: '1px solid var(--border-medium)',
                 overflow: 'hidden',
-                boxShadow: 'var(--shadow-sm)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer'
+                boxShadow: 'var(--shadow-md)',
+                border: '1px solid var(--border-medium)'
               }}
-              className="map-mock"
-              title="Click to Open Google Maps"
-              onClick={() => window.open('https://maps.google.com/?q=Nadipur,Pokhara,Nepal', '_blank')}
             >
-              {/* Abstract Map Art Grid and Curves (representing Pokhara lake/city) */}
-              <div style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                opacity: 0.12,
-                backgroundImage: 'radial-gradient(var(--text-muted) 1px, transparent 1px), linear-gradient(0deg, transparent 49%, var(--text-muted) 50%, transparent 51%)',
-                backgroundSize: '16px 16px, 100% 40px',
-                zIndex: 0
-              }} />
-              
-              {/* Lake curve representation */}
-              <div style={{
-                position: 'absolute',
-                left: '-50px',
-                bottom: '-50px',
-                width: '180px',
-                height: '180px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(158, 42, 140, 0.05)',
-                border: '2px dashed rgba(158, 42, 140, 0.15)',
-                zIndex: 0
-              }} />
-
-              {/* Pokhara Streets representations */}
-              <div style={{ position: 'absolute', width: '2px', height: '100%', backgroundColor: 'rgba(158,42,140,0.08)', left: '40%', transform: 'rotate(15deg)', zIndex: 0 }} />
-              <div style={{ position: 'absolute', width: '100%', height: '2px', backgroundColor: 'rgba(158,42,140,0.08)', top: '50%', transform: 'rotate(-5deg)', zIndex: 0 }} />
-              <div style={{ position: 'absolute', width: '2px', height: '100%', backgroundColor: 'rgba(158,42,140,0.08)', left: '70%', transform: 'rotate(-25deg)', zIndex: 0 }} />
-
-              {/* Central Glowing pulsing pin */}
-              <div 
-                style={{
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  zIndex: 2
-                }}
-              >
-                {/* Outer pulsing ring */}
-                <div style={{
-                  position: 'absolute',
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(255, 199, 44, 0.35)',
-                  boxShadow: 'var(--shadow-glow)',
-                  zIndex: 0,
-                  transform: 'scale(1)'
-                }}
-                className="pulse-effect"
-                />
-                
-                {/* Pin Head */}
-                <div style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '50% 50% 50% 0',
-                  backgroundColor: 'var(--primary-purple)',
-                  transform: 'rotate(-45deg)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  border: '2px solid var(--bg-card)',
-                  boxShadow: 'var(--shadow-md)',
-                  zIndex: 1
-                }}>
-                  <div style={{
-                    width: '12px',
-                    height: '12px',
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--secondary-gold)',
-                    transform: 'rotate(45deg)'
-                  }} />
-                </div>
-
-                {/* Floating label box */}
-                <div style={{
-                  backgroundColor: 'var(--bg-card)',
-                  padding: '0.4rem 0.8rem',
-                  borderRadius: 'var(--radius-sm)',
-                  boxShadow: 'var(--shadow-md)',
-                  fontSize: '0.75rem',
-                  fontWeight: 800,
-                  color: 'var(--text-heading)',
-                  marginTop: '0.5rem',
-                  border: '1px solid var(--border-medium)',
-                  zIndex: 3,
-                  whiteSpace: 'nowrap'
-                }}>
-                  Savory BakeHouse - Nadipur-3
-                </div>
-              </div>
-
-              {/* Floating button */}
-              <span style={{
-                position: 'absolute',
-                bottom: '10px',
-                right: '10px',
-                backgroundColor: 'rgba(31, 22, 20, 0.75)',
-                color: '#FFF',
-                padding: '0.35rem 0.75rem',
-                borderRadius: 'var(--radius-sm)',
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.25rem',
-                zIndex: 2,
-                transition: 'var(--transition-fast)'
-              }}
-              className="map-btn"
-              >
-                Directions <ExternalLink size={12} />
-              </span>
-
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.092053757797!2d83.99048934999999!3d28.233279699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399594415fcee6db%3A0xea49186bb677b569!2sNadipur%2C%20Pokhara%2033700!5e1!3m2!1sen!2snp!4v1780301576513!5m2!1sen!2snp"
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Savory BakeHouse - Nadipur, Pokhara Location"
+              />
             </div>
 
           </div>
@@ -466,21 +352,6 @@ const Contact = () => {
       </div>
 
       <style>{`
-        /* Glowing pulse animation for mock map pin */
-        @keyframes pulseRing {
-          0% { transform: scale(0.95); opacity: 0.8; }
-          50% { transform: scale(1.4); opacity: 0; }
-          100% { transform: scale(0.95); opacity: 0; }
-        }
-
-        .pulse-effect {
-          animation: pulseRing 2s cubic-bezier(0.25, 0, 0, 1) infinite;
-        }
-
-        .map-mock:hover .map-btn {
-          background-color: var(--primary-purple) !important;
-        }
-
         @media (max-width: 1024px) {
           .contact-info-grid {
             grid-template-columns: repeat(1, minmax(0, 1fr)) !important;

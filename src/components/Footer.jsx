@@ -116,7 +116,7 @@ const Footer = () => {
                 src={savoryTypoWhite} 
                 alt="Savory BakeHouse" 
                 style={{ 
-                  height: '150px', 
+                  height: '100px', 
                   width: 'auto', 
                   objectFit: 'contain'
                 }} 
