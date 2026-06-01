@@ -15,8 +15,8 @@ import Footer from './components/Footer';
 
 function App() {
   const handleWhatsAppChat = () => {
-    const phoneNumber = "9779856032145"; // Pokhara phone number
-    const message = encodeURIComponent("Hello Savory BakeHouse! I would like to inquire about ordering delicious treats from your Nadipur branch.");
+    const phoneNumber = "9779867667837"; // Pokhara phone number
+    const message = encodeURIComponent("Hello Savory BakeHouse! I would like to inquire about ordering delicious treats from your factory.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };

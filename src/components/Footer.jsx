@@ -145,7 +145,6 @@ const Footer = () => {
                 </h4>
                 <p style={{ fontSize: '0.85rem', color: 'var(--secondary-gold)', margin: 0, fontWeight: 700 }}>
                   Daily: 7:00 AM – 8:00 PM <br />
-                  <span style={{ color: 'rgba(250,245,236,0.5)', fontWeight: 400 }}>Bakers fire up stone ovens at 4:00 AM!</span>
                 </p>
               </div>
             </div>
