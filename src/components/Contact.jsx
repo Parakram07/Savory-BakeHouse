@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SAVORY BAKEHOUSE - Contact Section with Map & Form
+   SAVORY BAKEHOUSE - Contact Section (Final Clean + EmailJS + Original UI)
    ========================================================================== */
 
 import React, { useState } from 'react';
@@ -26,12 +26,9 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 🚨 Prevent double submit
     if (isSubmitting) return;
-
     setIsSubmitting(true);
 
-    // ✅ Basic validation (IMPORTANT)
     if (!formState.name || !formState.email || !formState.message) {
       alert("Please fill all required fields.");
       setIsSubmitting(false);
@@ -45,7 +42,6 @@ const Contact = () => {
       return;
     }
 
-    // EmailJS config
     const serviceID = "service_pp4yf98";
     const templateID = "template_fo4zpxl";
     const publicKey = "1miJhhuELoaszcgQF";
@@ -59,20 +55,10 @@ const Contact = () => {
     };
 
     try {
-      console.log("Sending EmailJS request...");
-
-      const result = await emailjs.send(
-        serviceID,
-        templateID,
-        templateParams,
-        publicKey
-      );
-
-      console.log("EMAILJS SUCCESS:", result);
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
 
       setSubmitSuccess(true);
 
-      // Reset form
       setFormState({
         name: "",
         email: "",
@@ -81,13 +67,10 @@ const Contact = () => {
         message: "",
       });
 
-      // Optional: auto reset success message
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 7000);
+      setTimeout(() => setSubmitSuccess(false), 7000);
 
     } catch (error) {
-      console.error("EMAILJS ERROR FULL:", error);
+      console.error("EMAILJS ERROR:", error);
       alert("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -98,7 +81,7 @@ const Contact = () => {
     <section id="contact" className="section section-bg-cream" style={{ overflow: 'hidden' }}>
       <div className="container">
 
-        {/* Section Header */}
+        {/* SECTION HEADER */}
         <div className="section-header">
           <span style={{
             fontWeight: 700,
@@ -106,25 +89,27 @@ const Contact = () => {
             color: 'var(--primary-purple)',
             textTransform: 'uppercase',
             letterSpacing: '2px',
-            display: 'inline-block',
-            marginBottom: '0.5rem'
+            marginBottom: '0.5rem',
+            display: 'inline-block'
           }}>
             Connect With Us
           </span>
+
           <h2>We'd Love to Hear From You</h2>
           <p>
-            Whether you want to pre-order warm sourdough, design your dream celebration cake, or ask about catering—get in touch!
+            Whether you want to pre-order sourdough, design celebration cakes, or ask about catering—get in touch!
           </p>
         </div>
 
         <div className="grid grid-cols-2 gap-12" style={{ alignItems: 'flex-start' }}>
 
-          {/* LEFT PANEL */}
-          <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          {/* LEFT SIDE */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
+            {/* INFO CARDS */}
             <div className="grid grid-cols-2 gap-4 contact-info-grid">
 
-              <div className="card" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem' }}>
+              <div className="card" style={cardStyle("#9E2A8C")}>
                 <MapPin size={20} />
                 <div>
                   <h4>Our Location</h4>
@@ -132,7 +117,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem' }}>
+              <div className="card" style={cardStyle("#FFC72C")}>
                 <Phone size={20} />
                 <div>
                   <h4>Phone</h4>
@@ -140,7 +125,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem' }}>
+              <div className="card" style={cardStyle("#9E2A8C")}>
                 <Mail size={20} />
                 <div>
                   <h4>Email</h4>
@@ -148,7 +133,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="card" style={{ padding: '1.5rem', display: 'flex', gap: '0.75rem' }}>
+              <div className="card" style={cardStyle("#009E49")}>
                 <Clock size={20} />
                 <div>
                   <h4>Hours</h4>
@@ -158,65 +143,84 @@ const Contact = () => {
 
             </div>
 
+            {/* MAP */}
+            <div style={mapWrapperStyle}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.142628545023!2d83.9894053!3d28.2345519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39959443ccb08669%3A0xf289d0b8443f6d24!2sSavory%20Bakehouse!5e0!3m2!1sen!2snp"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+              />
+            </div>
+
           </div>
 
-          {/* RIGHT PANEL */}
-          <div className="card" style={{ padding: '3rem 2.5rem' }}>
+          {/* RIGHT SIDE FORM */}
+          <div className="card" style={formCardStyle}>
 
-            <h3>Send an Inquiry</h3>
+            <h3 style={{ fontSize: "1.6rem", marginBottom: "0.5rem" }}>
+              Send an Inquiry
+            </h3>
+
+            <p style={{ color: "var(--text-muted)", marginBottom: "2rem" }}>
+              We usually respond within 2 hours.
+            </p>
 
             {submitSuccess ? (
               <div style={{ textAlign: 'center' }}>
                 <CheckCircle size={64} color="green" />
-                <h4>Message Sent!</h4>
-                <p>We will contact you soon.</p>
+                <h4>Dhanyabaad!</h4>
+                <p>Our Team will contact you shortly.</p>
+
+                <button
+                  className="btn btn-outline btn-sm"
+                  onClick={() => setSubmitSuccess(false)}
+                  style={{ marginTop: '1rem' }}
+                >
+                  Send Another Message
+                </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <form onSubmit={handleSubmit} style={formStyle}>
 
-                <input
-                  name="name"
-                  value={formState.name}
-                  onChange={handleInputChange}
-                  placeholder="Full Name"
-                  required
-                />
+                <input name="name" placeholder="Full Name" value={formState.name} onChange={handleInputChange} className="form-input" />
+                <input name="email" placeholder="Email" value={formState.email} onChange={handleInputChange} className="form-input" />
+                <input name="phone" placeholder="Phone" value={formState.phone} onChange={handleInputChange} className="form-input" />
 
-                <input
-                  name="email"
-                  value={formState.email}
-                  onChange={handleInputChange}
-                  placeholder="Email"
-                  required
-                />
+                {/* Updated Select with hidden default arrow */}
+                <div style={{ position: "relative" }}>
+                  <select 
+                    name="subject" 
+                    value={formState.subject} 
+                    onChange={handleInputChange} 
+                    className="form-input"
+                    style={{
+                      paddingRight: "40px",
+                      appearance: "none",
+                      WebkitAppearance: "none",
+                      MozAppearance: "none"
+                    }}
+                  >
+                    <option value="general">General Inquiry</option>
+                    <option value="cake">Cake Order</option>
+                    <option value="catering">Catering</option>
+                  </select>
 
-                <input
-                  name="phone"
-                  value={formState.phone}
-                  onChange={handleInputChange}
-                  placeholder="Phone"
-                />
-
-                <select
-                  name="subject"
-                  value={formState.subject}
-                  onChange={handleInputChange}
-                >
-                  <option value="general">General Inquiry</option>
-                  <option value="cake">Cake Order</option>
-                  <option value="catering">Catering</option>
-                </select>
+                  <ChevronDown size={18} style={chevronStyle} />
+                </div>
 
                 <textarea
                   name="message"
+                  placeholder="Your Message"
                   value={formState.message}
                   onChange={handleInputChange}
-                  placeholder="Your Message"
-                  required
+                  className="form-input"
+                  rows="4"
                 />
 
-                <button type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                <button className="btn btn-primary" disabled={isSubmitting}>
+                  {isSubmitting ? "Preparing Oven..." : <>Send Message <Send size={16} /></>}
                 </button>
 
               </form>
@@ -226,8 +230,62 @@ const Contact = () => {
 
         </div>
       </div>
+
+      {/* RESPONSIVE */}
+      <style>{`
+        @media (max-width: 1024px) {
+          .contact-info-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+
+        /* Additional safety for hiding default arrow */
+        .form-input {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+      `}</style>
     </section>
   );
+};
+
+/* ================= STYLES ================= */
+
+const cardStyle = (color) => ({
+  padding: "1.5rem",
+  display: "flex",
+  gap: "0.75rem",
+  alignItems: "flex-start",
+  borderLeft: `4px solid ${color}`
+});
+
+const mapWrapperStyle = {
+  height: "280px",
+  borderRadius: "12px",
+  overflow: "hidden",
+  boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
+};
+
+const formCardStyle = {
+  padding: "3rem 2.5rem",
+  background: "var(--bg-card)"
+};
+
+const formStyle = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "1rem"
+};
+
+const chevronStyle = {
+  position: "absolute",
+  right: "14px",
+  top: "50%",
+  transform: "translateY(-50%)",
+  pointerEvents: "none",
+  color: "var(--primary-purple)",
+  zIndex: 2
 };
 
 export default Contact;
