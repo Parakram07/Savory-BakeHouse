@@ -42,9 +42,9 @@ const Contact = () => {
       return;
     }
 
-    const serviceID = "service_pp4yf98";
-    const templateID = "template_fo4zpxl";
-    const publicKey = "1miJhhuELoaszcgQF";
+    const serviceID = "service_zz7csgk";
+    const templateID = "template_o6mazwd";
+    const publicKey = "etqbgtOE3MlYhpO-Z";
 
     const templateParams = {
       name: formState.name,
