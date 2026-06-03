@@ -46,7 +46,7 @@ const Contact = () => {
     }
 
     // EmailJS config
-    const serviceID = "service_emlkkdx";
+    const serviceID = "service_pp4yf98";
     const templateID = "template_fo4zpxl";
     const publicKey = "1miJhhuELoaszcgQF";
 
