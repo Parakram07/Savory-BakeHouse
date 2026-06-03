@@ -223,21 +223,38 @@ const Footer = () => {
                 </div>
                 <span style={{ lineHeight: 1.5 }}>Nadipur-3, Pokhara, Nepal</span>
               </li>
-              <li style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>
-                <div style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '50%',
-                  backgroundColor: 'rgba(255,199,44,0.15)',
+              <li
+                style={{
                   display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--secondary-gold)',
-                  flexShrink: 0
-                }}>
+                  gap: '0.85rem',
+                  alignItems: 'center'
+                }}
+              >
+                <div
+                  style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255,199,44,0.15)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'var(--secondary-gold)',
+                    flexShrink: 0
+                  }}
+                >
                   <Phone size={16} style={{ color: 'var(--text-heading)' }} />
                 </div>
-                <span>+977-9867667837</span>
+
+                <a
+                  href="tel:+9779867667837"
+                  style={{
+                    color: 'inherit',
+                    textDecoration: 'none'
+                  }}
+                >
+                  +977-9867667837
+                </a>
               </li>
               <li style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>
                 <div style={{
@@ -321,7 +338,7 @@ const Footer = () => {
                 {
                   icon: <MessageSquare size={18} />,
                   label: 'WhatsApp',
-                  url: 'https://wa.me/9779856032145'
+                  url: 'https://wa.me/9779867667837'
                 }
               ].map((social, i) => (
                 <a
