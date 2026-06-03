@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ChevronDown } from 'lucide-react';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -21,27 +22,44 @@ const Contact = () => {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock network request delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
+    // EmailJS credentials (replace these)
+    const serviceID = "service_emlkkdx";
+    const templateID = "template_fo4zpxl";
+    const publicKey = "1miJhhuELoaszcgQF";
 
-      // Log for compliance
-      console.log('Savory BakeHouse - Contact Form Submission:', formState);
+    // Data sent to EmailJS template
+    const templateParams = {
+      name: formState.name,
+      email: formState.email,
+      phone: formState.phone,
+      subject: formState.subject,
+      message: formState.message,
+    };
+
+    try {
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+
+      // Success UI
+      setSubmitSuccess(true);
 
       // Reset form
       setFormState({
-        name: '',
-        email: '',
-        phone: '',
-        subject: 'general',
-        message: ''
+        name: "",
+        email: "",
+        phone: "",
+        subject: "general",
+        message: "",
       });
-    }, 1800);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
