@@ -4,8 +4,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import logoImg from '../assets/logo.png';
-import savoryTypo from '../assets/savory-typo.png';
+import logoImg from '../assets/logo.webp';
+import savoryTypo from '../assets/savory-typo.webp';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -4,8 +4,8 @@
 
 import React, { useState } from 'react';
 import { MessageSquare, Send, Heart, MapPin, Phone, Mail, Clock } from 'lucide-react';
-import logoWhiteImg from '../assets/logo-white.png';
-import savoryTypoWhite from '../assets/savory-typo-white.png';
+import logoWhiteImg from '../assets/logo-white.webp';
+import savoryTypoWhite from '../assets/savory-typo-white.webp';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
