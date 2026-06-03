@@ -128,7 +128,7 @@ const CeoMessage = () => {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', color: 'var(--text-body)', fontSize: '1.05rem', lineHeight: 1.75 }}>
               <p>
-                Namaste and a very warm welcome to Savory BakeHouse. When we first laid the stone hearth of our bakery in the beautiful locality of Nadipur-3, Pokhara, our vision was crystal clear: to revive the authentic, slow-fermented, natural art of artisanal baking.
+                Namaste and a very warm welcome to Savory BakeHouse. When we first laid the stone hearth of our bakery in the beautiful locality of Nadipur, Pokhara, our vision was crystal clear: to revive the authentic, slow-fermented, natural art of artisanal baking.
               </p>
 
               <p>
