@@ -132,7 +132,7 @@ const Hero = () => {
               marginBottom: '2.5rem',
               maxWidth: '520px'
             }}>
-              Welcome to Savory BakeHouse, Pokhara's artisanal haven in Nadipur-3. We handcraft golden crust sourdough, melt-in-mouth pastries, and stunning custom celebration cakes using local, organic ingredients and timeless baking passion.
+              Welcome to Savory BakeHouse, Pokhara's artisanal haven in Nadipur. We handcraft golden crust sourdough, melt-in-mouth pastries, and stunning custom celebration cakes using local, organic ingredients and timeless baking passion.
             </p>
 
             {/* Hero CTAs */}
