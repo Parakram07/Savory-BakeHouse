@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { Quote, Sparkles, Award, ShieldCheck } from 'lucide-react';
-import sooyogImg from '../assets/ceo/Sooyog.jpg';
+import sooyogImg from '../assets/ceo/Sooyog.webp';
 
 const CeoMessage = () => {
   return (
