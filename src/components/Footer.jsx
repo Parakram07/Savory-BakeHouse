@@ -124,7 +124,7 @@ const Footer = () => {
             </div>
 
             <p style={{ fontSize: '0.92rem', color: 'rgba(250,245,236,0.65)', lineHeight: 1.7, margin: 0, textAlign: 'left' }}>
-              Crafting memories, slow-fermenting sourdoughs, and bespoke themed celebration cakes in Nadipur-3, Pokhara, since inception. Handcrafted daily with love.
+              Crafting memories, slow-fermenting sourdoughs, and bespoke themed celebration cakes in Pokhara, since inception. Handcrafted daily with love.
             </p>
 
             {/* Glowing Hours Badge */}
