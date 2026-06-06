@@ -27,7 +27,7 @@ const Hero = () => {
     <section 
       id="home" 
       style={{
-        paddingTop: '160px',
+        paddingTop: '120px',
         paddingBottom: '100px',
         position: 'relative',
         overflow: 'hidden',
@@ -295,7 +295,7 @@ const Hero = () => {
 
         @media (max-width: 1024px) {
           #home {
-            padding-top: 130px;
+            padding-top: 120px;
             padding-bottom: 70px;
           }
           
