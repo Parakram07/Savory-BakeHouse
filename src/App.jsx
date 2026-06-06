@@ -8,7 +8,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Products from './components/Products';
 
-import WhyChooseUs from './components/WhyChooseUs';
+import SchoolSupplyProgram from './components/SchoolSupplyProgram';
+import RetailPartnerProgram from './components/RetailPartnerProgram';
 import CeoMessage from './components/CeoMessage';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -37,8 +38,10 @@ function App() {
         {/* Dynamic Menu & Tabbed Products Showcase */}
         <Products />
 
-        {/* 6 Key Pillars / Why Choose Us Grid */}
-        <WhyChooseUs />
+        {/* School Supply Program Section */}
+        <SchoolSupplyProgram />
+        {/* Retail Partner Program Section */}
+        <RetailPartnerProgram />
 
         {/* Auto-playing Testimonials Review Slider */}
         <CeoMessage />

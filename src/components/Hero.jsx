@@ -91,28 +91,14 @@ const Hero = () => {
               color: 'var(--text-heading)',
               marginBottom: '1.25rem'
             }}>
-              Freshly Baked <br />
+              Freshly Baked.<br />
               <span style={{ 
                 color: 'var(--primary-purple)',
                 position: 'relative',
                 display: 'inline-block'
               }}>
-                with Love
-                {/* Underline decorative wave */}
-                <svg viewBox="0 0 100 10" preserveAspectRatio="none" style={{
-                  position: 'absolute',
-                  bottom: '-5px',
-                  left: 0,
-                  width: '100%',
-                  height: '8px',
-                  stroke: 'var(--secondary-gold)',
-                  strokeWidth: 4,
-                  strokeLinecap: 'round',
-                  fill: 'none'
-                }}>
-                  <path d="M0,5 Q25,0 50,5 T100,5" />
-                </svg>
-              </span> Every Day.
+                Reliably Delivered.
+              </span>
             </h1>
 
             {/* Nepali Brand Tagline */}
@@ -132,7 +118,7 @@ const Hero = () => {
               marginBottom: '2.5rem',
               maxWidth: '520px'
             }}>
-              Welcome to Savory BakeHouse, Pokhara's artisanal haven in Nadipur. We handcraft golden crust sourdough, melt-in-mouth pastries, and stunning custom celebration cakes using local, organic ingredients and timeless baking passion.
+              Welcome to Savory BakeHouse, Pokhara's premier commercial bakery manufacturing facility in Nadipur. We specialize in the high-volume, hygienic production of fresh rustic sourdoughs, sliced sandwich loaves, burger buns, and institutional baked goods, reliably distributed to supermarkets, schools, and retail networks daily.
             </p>
 
             {/* Hero CTAs */}
@@ -143,17 +129,17 @@ const Hero = () => {
             }} className="hero-buttons">
               <button 
                 className="btn btn-primary"
-                onClick={() => handleScrollToSection('products')}
+                onClick={() => handleScrollToSection('retail-partner')}
               >
-                View Our Products <ArrowRight size={18} />
+                Become a Retail Partner <ArrowRight size={18} />
               </button>
               
               <button 
                 className="btn btn-outline"
-                onClick={() => handleScrollToSection('contact')}
+                onClick={() => handleScrollToSection('school-supply')}
                 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
               >
-                <PhoneCall size={18} /> Contact Us
+                <PhoneCall size={18} /> School Supply Inquiry
               </button>
             </div>
 

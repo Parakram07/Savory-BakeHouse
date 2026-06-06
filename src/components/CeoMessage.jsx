@@ -26,7 +26,7 @@ const CeoMessage = () => {
           </span>
           <h2>A Message From Our CEO</h2>
           <p>
-            Understand the heart, passion, and values that guide our stone ovens.
+            Understand the vision, standards, and values that drive our commercial bakery manufacturing.
           </p>
         </div>
 
@@ -123,20 +123,20 @@ const CeoMessage = () => {
               fontFamily: 'var(--font-serif)',
               lineHeight: 1.3
             }}>
-              "Baking is a Sacred Promise of Nourishment, Quality, and Community."
+              "Industrial scale must never compromise safety, consistent quality, and hygiene."
             </h3>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', color: 'var(--text-body)', fontSize: '1.05rem', lineHeight: 1.75 }}>
               <p>
-                Namaste and a very warm welcome to Savory BakeHouse. When we first laid the stone hearth of our bakery in the beautiful locality of Nadipur, Pokhara, our vision was crystal clear: to revive the authentic, slow-fermented, natural art of artisanal baking.
+                Namaste and a very warm welcome to Savory BakeHouse. When we first established our commercial bakery manufacturing plant in the heart of Nadipur, Pokhara, our goal was clear: to redefine wholesale baking by combining high-volume production with strict clinical standards and reliable distribution.
               </p>
 
               <p>
-                To us, baking is not just a commercial process; it is a sacred promise. We believe that what we put onto your family's table must be wholesome, healthy, and crafted with pure love. That is why we maintain an uncompromising standard on ingredients—using organic wheat ground in stone mills, pure pasture butter, and high-altitude wild honey sourced directly from Gandaki valley.
+                To us, bulk bakery supply is a major responsibility. We believe that retail stores, educational institutions, and distribution networks deserve absolute consistency, freshness, and safety. That is why we maintain a highly controlled production environment—sourcing premium regional grains while running advanced commercial ovens under rigorous quality assurance protocols.
               </p>
 
               <p>
-                We operate our open-concept kitchen under clinical hygiene protocols, ensuring safety in every crumb. We are incredibly grateful to our local Pokhara community for welcoming us into your daily breakfasts and life's sweetest celebrations. We pledge to continue baking for your trust, your health, and your joy.
+                Our facility operates under HACCP-aligned guidelines, and our temperature-controlled fleet ensures that orders reach our partners fresh daily. We are deeply grateful to our supermarket clients, school partners, and distributors for trusting us to power their supply chains. We pledge to continue baking for your trust, safety, and business growth.
               </p>
             </div>
 

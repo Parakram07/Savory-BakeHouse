@@ -97,7 +97,7 @@ const Contact = () => {
 
           <h2>We'd Love to Hear From You</h2>
           <p>
-            Whether you want to pre-order sourdough, design celebration cakes, or ask about catering—get in touch!
+            Whether you are inquiring about bulk wholesale supplies, school partnerships, or high-volume orders—get in touch!
           </p>
         </div>
 
@@ -203,8 +203,8 @@ const Contact = () => {
                     }}
                   >
                     <option value="general">General Inquiry</option>
-                    <option value="cake">Cake Order</option>
-                    <option value="catering">Catering</option>
+                    <option value="retail">Retail Partner</option>
+                    <option value="school">School Partnership</option>
                   </select>
 
                   <ChevronDown size={18} style={chevronStyle} />

@@ -64,7 +64,7 @@ const Gallery = () => {
           </span>
           <h2>Glances of Savory BakeHouse</h2>
           <p>
-            Take a visual tour through our warm Nadipur kitchen, our cozy corner café, and some of our finest handcrafted creations.
+            Take a visual tour through our advanced Nadipur baking facility, our packaging lines, and some of our commercial baked products.
           </p>
         </div>
 

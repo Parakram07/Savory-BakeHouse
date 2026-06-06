@@ -1,9 +1,9 @@
 /* ==========================================================================
-   SAVORY BAKEHOUSE - About Us Section & Premium Highlights
+   SAVORY BAKEHOUSE - About Us Section & Wholesale Production Philosophy
    ========================================================================== */
 
 import React from 'react';
-import { ShieldCheck, Heart, Sparkles, Coffee } from 'lucide-react';
+import { ShieldCheck, Heart, Sparkles, Activity } from 'lucide-react';
 
 const About = () => {
   
@@ -11,17 +11,17 @@ const About = () => {
   const metrics = [
     {
       id: 'm1',
-      title: '100% Fresh Daily',
+      title: 'Wholesale Production',
       value: '4:00 AM',
-      description: 'Ovens fire up early every morning so your croissants are hot and fresh.',
+      description: 'Ovens fire up early to bake, pack, and load deliveries for our retail and school networks.',
       icon: <Sparkles size={22} />,
       colorType: 'gold'
     },
     {
       id: 'm2',
-      title: 'Local Ingredients',
-      value: 'Organic',
-      description: 'Pokhara honey, high-altitude grains, and fresh farm butter.',
+      title: 'Ingredient Sourcing',
+      value: '100% Local',
+      description: 'We prioritize premium regional grains and farm-fresh local ingredients.',
       icon: <Heart size={22} />,
       colorType: 'purple'
     },
@@ -29,16 +29,16 @@ const About = () => {
       id: 'm3',
       title: 'Pristine Hygiene',
       value: 'Grade A',
-      description: 'Clinical sanitization protocols and premium open kitchen standards.',
+      description: 'Our factory operates under clinical-grade sanitization protocols.',
       icon: <ShieldCheck size={22} />,
       colorType: 'green'
     },
     {
       id: 'm4',
-      title: 'Nadipur Cozy Cafe',
-      value: '100%',
-      description: 'Sit-in café area for pairing warm treats with Pokhara coffee.',
-      icon: <Coffee size={22} />,
+      title: 'Production Scale',
+      value: '12,500+',
+      description: 'Daily units baked, packed, and distributed across our Pokhara B2B network.',
+      icon: <Activity size={22} />,
       colorType: 'purple'
     }
   ];
@@ -112,12 +112,12 @@ const About = () => {
             >
               <img 
                 src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&auto=format&fit=crop&q=80" 
-                alt="Baker preparing sourdough dough" 
+                alt="Factory baking preparation and raw flour" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
 
-            {/* Image B: Baker glazing Croissants (Right-Bottom focus) */}
+            {/* Image B: Baked Goods (Right-Bottom focus) */}
             <div style={{
               position: 'absolute',
               right: '8%',
@@ -135,7 +135,7 @@ const About = () => {
             >
               <img 
                 src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop&q=80" 
-                alt="Fresh butter croissants baking" 
+                alt="Wholesale fresh breads on baking racks" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
@@ -157,7 +157,7 @@ const About = () => {
               alignItems: 'center',
               gap: '0.4rem'
             }}>
-              <ShieldCheck size={16} /> 100% Handcrafted
+              <ShieldCheck size={16} /> Hygienic Production
             </div>
 
           </div>
@@ -174,7 +174,7 @@ const About = () => {
               display: 'inline-block',
               marginBottom: '0.5rem'
             }}>
-              Our Sacred Craft
+              Wholesale Baking Leadership
             </span>
             
             <h2 style={{ 
@@ -183,15 +183,15 @@ const About = () => {
               marginBottom: '1.5rem',
               position: 'relative'
             }}>
-              Baking Joy into the Heart of Pokhara.
+              Powering Pokhara's B2B Bakery Supply Chain.
             </h2>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '1.25rem', lineHeight: 1.7 }}>
-              Nestled in the serene locality of Nadipur, Pokhara, Savory BakeHouse is born out of a simple, beautiful passion: to revive the rich, honest art of traditional stone-oven baking. We believe that true quality takes time, focus, and a deep connection to our local community.
+              Nestled in the serene locality of Nadipur, Pokhara, Savory BakeHouse is a state-of-the-art commercial bakery manufacturing facility. We specialize in producing high-quality, fresh, and hygienic bakery products in bulk, serving as a trusted supply chain partner for retail supermarkets, school programs, and institutional networks.
             </p>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '2rem', lineHeight: 1.7 }}>
-              Our kitchen starts humming in the silent hours of 4:00 AM. Using locally milled organic grains, premium Himalayan wildflower honey, and high-fat pasture butter, our master bakers fold love and attention into every single sourdough loaf, butter croissant, and custom celebration cake. We adhere strictly to pristine hygiene standards, delivering baking that is as healthy as it is sensory and decadent.
+              Our production lines activate in the early hours of 4:00 AM. Utilizing locally sourced grains, clean ingredients, and high-capacity stone ovens, our factory coordinates daily baking runs under strict quality assurance protocols. We avoid artificial additives and prioritize food safety (HACCP-aligned) to deliver products that retailers and parents can trust completely.
             </p>
 
             {/* Head Baker Sign-off */}
@@ -207,7 +207,7 @@ const About = () => {
                   Savory BakeHouse
                 </p>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>
-                  Crafting Smiles, One Crumb at a Time
+                  Pokhara's Premier Wholesale Bakery Manufacturer
                 </p>
               </div>
             </div>

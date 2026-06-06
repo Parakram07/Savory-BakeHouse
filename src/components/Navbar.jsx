@@ -16,7 +16,8 @@ const Navbar = () => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
     { id: 'products', label: 'Our Products' },
-    { id: 'why-choose-us', label: 'Why Choose Us' },
+    { id: 'school-supply', label: 'School Supply' },
+    { id: 'retail-partner', label: 'Retail Partner' },
     { id: 'contact', label: 'Contact Us' }
   ];
 
@@ -25,17 +26,29 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Simple active section detection
-      const scrollPosition = window.scrollY + 150;
+      const navbarOffset = 120; // threshold offset from top
+      let matchedSection = null;
+
       for (const link of navLinks) {
         const element = document.getElementById(link.id);
         if (element) {
-          const top = element.offsetTop;
-          const height = element.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(link.id);
+          const rect = element.getBoundingClientRect();
+          // If the top of the section is at or above the threshold, and the bottom is below it
+          if (rect.top <= navbarOffset && rect.bottom > navbarOffset) {
+            matchedSection = link.id;
+            break;
           }
         }
+      }
+
+      // Special case: if we are at the absolute bottom of the page, highlight the contact section
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 15;
+      if (isAtBottom) {
+        matchedSection = 'contact';
+      }
+
+      if (matchedSection) {
+        setActiveSection(matchedSection);
       }
     };
 

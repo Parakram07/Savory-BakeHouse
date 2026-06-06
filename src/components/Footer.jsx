@@ -124,7 +124,7 @@ const Footer = () => {
             </div>
 
             <p style={{ fontSize: '0.92rem', color: 'rgba(250,245,236,0.65)', lineHeight: 1.7, margin: 0, textAlign: 'left' }}>
-              Crafting memories, slow-fermenting sourdoughs, and bespoke themed celebration cakes in Pokhara, since inception. Handcrafted daily with love.
+              Pokhara's leading commercial bakery manufacturing facility. Supplying fresh, hygienic, and consistent baked goods to retail networks, schools, and institutional partners daily.
             </p>
 
             {/* Glowing Hours Badge */}
@@ -172,7 +172,8 @@ const Footer = () => {
                 { id: 'home', label: 'Home Page' },
                 { id: 'about', label: 'About Our Story' },
                 { id: 'products', label: 'Bakery Products' },
-                { id: 'why-choose-us', label: 'Why Choose Us' },
+                { id: 'school-supply', label: 'School Supply' },
+                { id: 'retail-partner', label: 'Retail Partner' },
                 { id: 'contact', label: 'Contact Us' }
               ].map((link) => (
                 <li key={link.id}>

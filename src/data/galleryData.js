@@ -4,9 +4,9 @@
 
 export const galleryCategories = [
   { id: 'all', label: 'All Showcase' },
-  { id: 'creations', label: 'Our Masterpieces' },
+  { id: 'creations', label: 'Our Products' },
   { id: 'process', label: 'The Baking Craft' },
-  { id: 'interior', label: 'Bakehouse & Cafe Vibe' }
+  { id: 'facility', label: 'Factory & Facilities' }
 ];
 
 export const galleryItems = [
@@ -19,17 +19,17 @@ export const galleryItems = [
   },
   {
     id: 'g2',
-    title: 'Floral Fantasy Wedding Cake',
+    title: 'Commercial Burger Buns',
     category: 'creations',
     image: 'https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=800&auto=format&fit=crop&q=80',
-    description: 'A three-tiered elegant vanilla sponge wedding cake decorated with custom hand-piped pastel cream florals.'
+    description: 'Freshly trayed high-volume sesame burger buns baked to a perfect golden brown for our retail partners.'
   },
   {
     id: 'g3',
-    title: 'Our Cozy Nadipur Corner',
-    category: 'interior',
+    title: 'Hygienic Packaging Line',
+    category: 'facility',
     image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80',
-    description: 'A view of our warm, sunlit sit-in café area where patrons pair fresh pastries with Himalayan organic coffee.'
+    description: 'Our modern, clean packaging area where baked goods are sealed under strict sanitation guidelines.'
   },
   {
     id: 'g4',
@@ -40,10 +40,10 @@ export const galleryItems = [
   },
   {
     id: 'g5',
-    title: 'Gourmet Red Velvet Cupcake Spread',
+    title: 'Bulk Sliced Breads Packaged',
     category: 'creations',
     image: 'https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=800&auto=format&fit=crop&q=80',
-    description: 'A luxury selection of red velvet and vanilla cupcakes dressed with smooth cream cheese and golden sugar beads.'
+    description: 'Freshly sealed commercial sandwich loaves loaded onto crates, ready for dispatch to regional supermarket shelves.'
   },
   {
     id: 'g6',
@@ -54,16 +54,16 @@ export const galleryItems = [
   },
   {
     id: 'g7',
-    title: 'Handcrafted Chocolate Truffle Cake',
+    title: 'Wholesale Premium Buns',
     category: 'creations',
     image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop&q=80',
-    description: 'Decadent dark chocolate frosting layered on chocolate sponge and garnished with premium gold leaf crumbs.'
+    description: 'Consistent, high-volume production of premium dinner rolls and soft buns for commercial catering.'
   },
   {
     id: 'g8',
-    title: 'The Bread Display Shelves',
-    category: 'interior',
+    title: 'Daily Dispatch Area',
+    category: 'facility',
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80',
-    description: 'Rustic wooden shelves filled with daily baked French baguettes, sourdough boules, rye breads, and soft dinner rolls.'
+    description: 'Hygienic stacking area where daily bread crates are arranged by route before loading into delivery vans.'
   }
 ];
