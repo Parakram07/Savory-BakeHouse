@@ -118,7 +118,7 @@ const Hero = () => {
               marginBottom: '2.5rem',
               maxWidth: '520px'
             }}>
-              Welcome to Savory BakeHouse, Pokhara's premier commercial bakery manufacturing facility in Nadipur. We specialize in the high-volume, hygienic production of fresh rustic sourdoughs, sliced sandwich loaves, burger buns, and institutional baked goods, reliably distributed to supermarkets, schools, and retail networks daily.
+              Savory BakeHouse is a bakery manufacturing and distribution company focused on freshness, hygiene, consistency, and reliable supply. We produce bakery products for everyday families and distribute them through local shops, supermarkets, schools, and institutional partners. Our work is built on clean production, quality control, timely delivery, and long-term partnerships.
             </p>
 
             {/* Hero CTAs */}
