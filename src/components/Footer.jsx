@@ -124,7 +124,7 @@ const Footer = () => {
             </div>
 
             <p style={{ fontSize: '0.92rem', color: 'rgba(250,245,236,0.65)', lineHeight: 1.7, margin: 0, textAlign: 'left' }}>
-              Pokhara's leading commercial bakery manufacturing facility. Supplying fresh, hygienic, and consistent baked goods to retail networks, schools, and institutional partners daily.
+              Savory BakeHouse is a bakery manufacturing and distribution company in Pokhara, supplying fresh and hygienic bakery products to retailers, schools, and supply partners.
             </p>
 
             {/* Glowing Hours Badge */}
@@ -141,10 +141,10 @@ const Footer = () => {
               <Clock size={20} style={{ color: 'var(--secondary-gold)', flexShrink: 0, marginTop: '2px' }} />
               <div>
                 <h4 style={{ color: '#FFFFFF', fontSize: '0.95rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.35rem', fontFamily: 'var(--font-sans)' }}>
-                  Opening Hours
+                  Supply Inquiry
                 </h4>
                 <p style={{ fontSize: '0.85rem', color: 'var(--secondary-gold)', margin: 0, fontWeight: 700 }}>
-                  Daily: 7:00 AM – 8:00 PM <br />
+                  Connect with us for regular bakery product supply. <br />
                 </p>
               </div>
             </div>
@@ -248,13 +248,13 @@ const Footer = () => {
                 </div>
 
                 <a
-                  href="tel:+9779867667837"
+                  href="tel:061-572347"
                   style={{
                     color: 'inherit',
                     textDecoration: 'none'
                   }}
                 >
-                  +977-9867667837
+                  061-572347
                 </a>
               </li>
               <li style={{ display: 'flex', gap: '0.85rem', alignItems: 'center' }}>

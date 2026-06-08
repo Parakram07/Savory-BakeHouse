@@ -22,7 +22,7 @@ const SchoolSupplyProgram = () => {
     {
       num: '02',
       title: 'Student-Friendly Products',
-      subtitle: 'Fresh bakery items suitable for school needs.',
+      subtitle: 'Fresh bakery items for school needs.',
       description: 'Our products are prepared in suitable portions for students and regular school supply requirements.',
       icon: <Heart size={28} />,
       color: 'gold',
