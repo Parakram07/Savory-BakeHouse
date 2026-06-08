@@ -6,17 +6,17 @@ const RetailPartnerProgram = () => {
     {
       type: 'Supermarkets & Retail Chains',
       schedule: 'Daily Morning Dispatch',
-      details: 'Consistent daily restocks of sliced sandwich breads, burger buns, and packaged high-turnover goods.'
+      details: 'Consistent daily supply of sliced sandwich breads, burger buns, and packaged bakery products for high-turnover retail shelves.'
     },
     {
-      type: 'Independent Grocers & Outlets',
-      schedule: 'Scheduled Wholesale Drops',
-      details: 'Reliable drops of daily baked staples, sized and packaged specifically for consumer retail shelves.'
+      type: 'Independent Grocers & Local Outlets',
+      schedule: 'Scheduled Route Delivery',
+      details: 'Reliable bakery product delivery through planned sales van routes for local shops and retail outlets.'
     },
     {
       type: 'Distributors & Wholesalers',
-      schedule: 'High-Volume Logistics',
-      details: 'Bulk contract rates, palletized shrink-wrapped loading, custom formulation, and private label support.'
+      schedule: 'Bulk Supply Support',
+      details: 'Bulk-ready bakery products, carton-packed delivery, and coordinated supply support for wholesale and distribution partners.'
     }
   ];
 
@@ -34,13 +34,13 @@ const RetailPartnerProgram = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
                   <Award size={18} style={{ color: 'var(--primary-purple)' }} />
                   <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-heading)', fontFamily: 'var(--font-sans)' }}>
-                    Wholesale Supply Profile
+                    SUPPLY & DISTRIBUTION PROFILE
                   </h4>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <div className="pulse-dot"></div>
                   <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--fresh-green)', textTransform: 'uppercase' }}>
-                    Active & Online
+                    Active Distribution
                   </span>
                 </div>
               </div>
@@ -58,7 +58,7 @@ const RetailPartnerProgram = () => {
                       Production Capacity
                     </h5>
                     <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                      12,500+ units daily output capacity, optimized for high-volume supermarket runs.
+                      Fresh bakery products prepared daily to support regular retail, school, and institutional supply.
                     </p>
                   </div>
                 </div>
@@ -70,10 +70,10 @@ const RetailPartnerProgram = () => {
                   </div>
                   <div>
                     <h5 style={{ margin: '0 0 0.15rem 0', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-heading)', fontFamily: 'var(--font-sans)' }}>
-                      Hygiene Compliance
+                      Hygiene Standards
                     </h5>
                     <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                      Clinical food processing standards conforming to HACCP-aligned GMP rules.
+                      Products are prepared in a clean production environment with proper handling, hygiene practices, and quality checks.
                     </p>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const RetailPartnerProgram = () => {
                       Wholesale Distribution
                     </h5>
                     <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                      Temperature-controlled logistics fleet delivering fresh goods directly to store shelves.
+                      Regular supply through sales vans and distribution partners to support retail shelves and local outlets.
                     </p>
                   </div>
                 </div>
@@ -100,10 +100,10 @@ const RetailPartnerProgram = () => {
                   </div>
                   <div>
                     <h5 style={{ margin: '0 0 0.15rem 0', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-heading)', fontFamily: 'var(--font-sans)' }}>
-                      Order Lead Time
+                      Supply Lead Time
                     </h5>
                     <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                      Reliable 24 to 48-hour order turnaround for daily and seasonal wholesale dispatch.
+                      Reliable coordination for daily, scheduled, and bulk supply requirements.
                     </p>
                   </div>
                 </div>
@@ -115,10 +115,10 @@ const RetailPartnerProgram = () => {
                   </div>
                   <div>
                     <h5 style={{ margin: '0 0 0.15rem 0', fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-heading)', fontFamily: 'var(--font-sans)' }}>
-                      Recipe Formulations
+                      Product Support
                     </h5>
                     <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--text-body)', lineHeight: 1.4 }}>
-                      Full capability to support custom B2B recipes and private label formulations.
+                      Consistent bakery products prepared for retail, school, and institutional supply needs.
                     </p>
                   </div>
                 </div>

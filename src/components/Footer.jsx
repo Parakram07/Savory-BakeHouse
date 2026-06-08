@@ -271,7 +271,7 @@ const Footer = () => {
                 }}>
                   <Mail size={16} />
                 </div>
-                <span style={{ fontSize: '0.88rem' }}>info@savorybakehouse.com</span>
+                <span style={{ fontSize: '0.88rem' }}>info.savorynp@gmail.com</span>
               </li>
             </ul>
           </div>

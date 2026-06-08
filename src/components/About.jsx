@@ -11,33 +11,33 @@ const About = () => {
   const metrics = [
     {
       id: 'm1',
-      title: 'Wholesale Production',
-      value: '4:00 AM',
-      description: 'Ovens fire up early to bake, pack, and load deliveries for our retail and school networks.',
+      title: 'Daily Production',
+      value: 'Fresh Batches',
+      description: 'Bakery products are prepared daily to support regular supply for shops, schools, and local partners.',
       icon: <Sparkles size={22} />,
       colorType: 'gold'
     },
     {
       id: 'm2',
-      title: 'Ingredient Sourcing',
-      value: '100% Local',
-      description: 'We prioritize premium regional grains and farm-fresh local ingredients.',
+      title: 'CONSISTENT QUALITY',
+      value: 'Same Standard',
+      description: 'We focus on consistent taste, size, freshness, and packaging across every batch.',
       icon: <Heart size={22} />,
       colorType: 'purple'
     },
     {
       id: 'm3',
-      title: 'Pristine Hygiene',
-      value: 'Grade A',
-      description: 'Our factory operates under clinical-grade sanitization protocols.',
+      title: 'HYGIENIC HANDLING',
+      value: 'Clean & Safe',
+      description: 'Products are prepared, handled, and packed with proper hygiene and care.',
       icon: <ShieldCheck size={22} />,
       colorType: 'green'
     },
     {
       id: 'm4',
-      title: 'Production Scale',
-      value: '12,500+',
-      description: 'Daily units baked, packed, and distributed across our Pokhara B2B network.',
+      title: 'RELIABLE SUPPLY',
+      value: 'On-Time Delivery',
+      description: 'Our distribution system supports timely supply through sales vans, retailers, and school partnerships.',
       icon: <Activity size={22} />,
       colorType: 'purple'
     }
@@ -165,33 +165,21 @@ const About = () => {
           {/* About Right Brand Narrative */}
           <div style={{ textAlign: 'left' }} className="about-text">
             
-            <span style={{ 
-              fontWeight: 700, 
-              fontSize: '0.9rem', 
-              color: 'var(--primary-purple)', 
-              textTransform: 'uppercase', 
-              letterSpacing: '2px',
-              display: 'inline-block',
-              marginBottom: '0.5rem'
-            }}>
-              Wholesale Baking Leadership
-            </span>
-            
             <h2 style={{ 
               fontSize: '2.6rem', 
               color: 'var(--text-heading)', 
               marginBottom: '1.5rem',
               position: 'relative'
             }}>
-              Powering Pokhara's B2B Bakery Supply Chain.
+              A Trusted Bakery Manufacturer.
             </h2>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '1.25rem', lineHeight: 1.7 }}>
-              Nestled in the serene locality of Nadipur, Pokhara, Savory BakeHouse is a state-of-the-art commercial bakery manufacturing facility. We specialize in producing high-quality, fresh, and hygienic bakery products in bulk, serving as a trusted supply chain partner for retail supermarkets, school programs, and institutional networks.
+              Savory BakeHouse is a bakery manufacturing and distribution company focused on freshness, hygiene, consistency, and reliable supply. We produce bakery products for everyday families and distribute them through local shops, supermarkets, schools, and institutional partners.
             </p>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '2rem', lineHeight: 1.7 }}>
-              Our production lines activate in the early hours of 4:00 AM. Utilizing locally sourced grains, clean ingredients, and high-capacity stone ovens, our factory coordinates daily baking runs under strict quality assurance protocols. We avoid artificial additives and prioritize food safety (HACCP-aligned) to deliver products that retailers and parents can trust completely.
+              Our work is built on clean production, quality control, timely delivery, and long-term partnerships.
             </p>
 
             {/* Head Baker Sign-off */}
@@ -202,14 +190,7 @@ const About = () => {
               borderTop: '1px solid var(--border-medium)',
               paddingTop: '1.5rem'
             }}>
-              <div>
-                <p style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', fontStyle: 'italic', color: 'var(--primary-purple)', lineHeight: 1, margin: '0 0 0.25rem 0' }}>
-                  Savory BakeHouse
-                </p>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>
-                  Pokhara's Premier Wholesale Bakery Manufacturer
-                </p>
-              </div>
+          
             </div>
 
           </div>
@@ -266,7 +247,7 @@ const About = () => {
                   
                   {/* Large High-Contrast Display Metric */}
                   <span style={{ 
-                    fontSize: '2rem', 
+                    fontSize: '1.6rem', 
                     fontWeight: 850, 
                     color: 'var(--text-heading)', 
                     fontFamily: 'var(--font-sans)',

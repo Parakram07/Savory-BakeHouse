@@ -118,7 +118,7 @@ const Hero = () => {
               marginBottom: '2.5rem',
               maxWidth: '520px'
             }}>
-              Savory BakeHouse is a bakery manufacturing and distribution company focused on freshness, hygiene, consistency, and reliable supply. We produce bakery products for everyday families and distribute them through local shops, supermarkets, schools, and institutional partners. Our work is built on clean production, quality control, timely delivery, and long-term partnerships.
+              Savory BakeHouse manufactures fresh bakery products in a hygienic production facility and supplies them through retail stores, schools, and distribution partners.
             </p>
 
             {/* Hero CTAs */}

@@ -1,7 +1,3 @@
-/* ==========================================================================
-   SAVORY BAKEHOUSE - Responsive Navigation Bar
-   ========================================================================== */
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/logo.webp';
@@ -21,19 +17,19 @@ const Navbar = () => {
     { id: 'contact', label: 'Contact Us' }
   ];
 
-  // Handle scroll detection for background transparency and active link highlighting
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      const navbarOffset = 120; // threshold offset from top
+      const navbarOffset = 120;
       let matchedSection = null;
 
       for (const link of navLinks) {
         const element = document.getElementById(link.id);
+
         if (element) {
           const rect = element.getBoundingClientRect();
-          // If the top of the section is at or above the threshold, and the bottom is below it
+
           if (rect.top <= navbarOffset && rect.bottom > navbarOffset) {
             matchedSection = link.id;
             break;
@@ -41,8 +37,10 @@ const Navbar = () => {
         }
       }
 
-      // Special case: if we are at the absolute bottom of the page, highlight the contact section
-      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 15;
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 15;
+
       if (isAtBottom) {
         matchedSection = 'contact';
       }
@@ -53,14 +51,18 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navLinks]);
 
   const handleLinkClick = (id) => {
     setIsMobileMenuOpen(false);
+
     const element = document.getElementById(id);
+
     if (element) {
-      const offset = 80; // height of the navbar
+      const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -70,13 +72,14 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+
       setActiveSection(id);
     }
   };
 
   return (
     <>
-      <header 
+      <header
         style={{
           position: 'fixed',
           top: 0,
@@ -88,110 +91,112 @@ const Navbar = () => {
           alignItems: 'center',
           transition: 'var(--transition-smooth)',
           boxShadow: isScrolled ? 'var(--shadow-md)' : 'none',
-          backgroundColor: isScrolled ? 'rgba(255, 253, 246, 0.95)' : 'rgba(255, 253, 246, 0.7)',
+          backgroundColor: isScrolled
+            ? 'rgba(255, 253, 246, 0.95)'
+            : 'rgba(255, 253, 246, 0.7)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
-          borderBottom: isScrolled ? '1px solid var(--border-medium)' : '1px solid transparent'
+          borderBottom: isScrolled
+            ? '1px solid var(--border-medium)'
+            : '1px solid transparent'
         }}
       >
-        <div 
-          className="container" 
-          style={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', 
+        <div
+          className="container"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
             alignItems: 'center',
             width: '100%',
             height: '100%'
           }}
         >
-          
-          {/* 1. Logo Brand Area (Far Left Column) */}
-          <a 
-            href="#home" 
-            onClick={(e) => { e.preventDefault(); handleLinkClick('home'); }}
-            style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}
+          {/* Logo */}
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('home');
+            }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              flexShrink: 0
+            }}
           >
-            <img 
-              src={logoImg} 
-              alt="Savory BakeHouse Logo" 
-              style={{ height: '54px', width: '54px', objectFit: 'contain', transition: 'var(--transition-fast)' }} 
+            <img
+              src={logoImg}
+              alt="Savory BakeHouse Logo"
+              style={{
+                height: '54px',
+                width: '54px',
+                objectFit: 'contain'
+              }}
             />
+
             <img
               src={savoryTypo}
               alt="Savory BakeHouse"
-              style={{ height: '140px', width: 'auto', objectFit: 'contain' }}
+              style={{
+                height: '140px',
+                width: 'auto',
+                objectFit: 'contain'
+              }}
             />
           </a>
 
-          {/* 2. Desktop Navigation Links (Middle Column) */}
-          <nav className="desktop-only" style={{ marginInline: 'auto' }}>
-            <ul style={{ display: 'flex', listStyle: 'none', gap: '2rem', margin: 0, padding: 0 }}>
-              {navLinks.map((link) => (
-                <li key={link.id} style={{ position: 'relative' }}>
-                  <a
-                    href={`#${link.id}`}
-                    onClick={(e) => { e.preventDefault(); handleLinkClick(link.id); }}
-                    style={{
-                      fontFamily: 'var(--font-sans)',
-                      fontWeight: 700,
-                      fontSize: '0.95rem',
-                      color: activeSection === link.id ? 'var(--primary-purple)' : 'var(--text-body)',
-                      position: 'relative',
-                      padding: '0.5rem 0.25rem',
-                      transition: 'var(--transition-fast)'
-                    }}
-                    className="nav-link-item"
-                  >
-                    {link.label}
-                    {activeSection === link.id && (
-                      <span style={{
-                        position: 'absolute',
-                        bottom: '-6px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        width: '5px',
-                        height: '5px',
-                        backgroundColor: 'var(--secondary-gold)',
-                        borderRadius: '50%'
-                      }} />
-                    )}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* 3. Action Button Area (Far Right Column) */}
-          <div className="desktop-only" style={{ flexShrink: 0 }}>
-            <button 
+          {/* Right Side Controls */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              flexShrink: 0
+            }}
+          >
+            <button
               className="btn btn-primary btn-sm"
               onClick={() => handleLinkClick('contact')}
-              style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.35rem'
+              }}
             >
-              Order Now <ArrowRight size={14} />
+              Get in Touch <ArrowRight size={14} />
+            </button>
+
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="menu-btn"
+              style={{
+                background: isMobileMenuOpen
+                  ? 'rgba(158, 42, 140, 0.08)'
+                  : 'transparent',
+                border: '1px solid rgba(158, 42, 140, 0.12)',
+                borderRadius: '50%',
+                width: '52px',
+                height: '52px',
+                cursor: 'pointer',
+                color: isMobileMenuOpen
+                  ? 'var(--secondary-gold)'
+                  : 'var(--primary-purple)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.3s ease',
+                flexShrink: 0
+              }}
+              aria-label="Toggle navigation menu"
+            >
+              {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
             </button>
           </div>
-
-          {/* Hamburger Menu Toggle (Mobile Only) */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={{
-              display: 'none',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--text-heading)',
-              padding: '0.5rem'
-            }}
-            className="mobile-toggle"
-            aria-label="Toggle navigation menu"
-          >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
       </header>
 
-      {/* Slide-in Mobile Menu Drawer */}
+      {/* Menu Drawer */}
       <div
         style={{
           position: 'fixed',
@@ -199,11 +204,13 @@ const Navbar = () => {
           right: 0,
           bottom: 0,
           width: '100%',
-          maxWidth: '300px',
+          maxWidth: '320px',
           backgroundColor: 'var(--bg-cream)',
           zIndex: 9999,
           boxShadow: 'var(--shadow-lg)',
-          transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100%)',
+          transform: isMobileMenuOpen
+            ? 'translateX(0)'
+            : 'translateX(100%)',
           transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
           display: 'flex',
           flexDirection: 'column',
@@ -211,32 +218,73 @@ const Navbar = () => {
           borderLeft: '1px solid var(--border-medium)'
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '2rem'
+          }}
+        >
+          <span
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontSize: '1.25rem',
+              fontWeight: 700,
+              color: 'var(--text-heading)'
+            }}
+          >
             Menu
           </span>
-          <button 
+
+          <button
             onClick={() => setIsMobileMenuOpen(false)}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-heading)' }}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: 'var(--text-heading)'
+            }}
+            aria-label="Close navigation menu"
           >
             <X size={24} />
           </button>
         </div>
 
-        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: 0, margin: 0 }}>
+        <ul
+          style={{
+            listStyle: 'none',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.5rem',
+            padding: 0,
+            margin: 0
+          }}
+        >
           {navLinks.map((link) => (
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
-                onClick={(e) => { e.preventDefault(); handleLinkClick(link.id); }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(link.id);
+                }}
                 style={{
                   fontFamily: 'var(--font-sans)',
                   fontWeight: 600,
                   fontSize: '1.1rem',
-                  color: activeSection === link.id ? 'var(--primary-purple)' : 'var(--text-body)',
+                  color:
+                    activeSection === link.id
+                      ? 'var(--primary-purple)'
+                      : 'var(--text-body)',
                   display: 'block',
                   padding: '0.5rem 0',
-                  borderBottom: `1px solid ${activeSection === link.id ? 'rgba(158, 42, 140, 0.15)' : 'transparent'}`
+                  borderBottom: `1px solid ${
+                    activeSection === link.id
+                      ? 'rgba(158, 42, 140, 0.15)'
+                      : 'transparent'
+                  }`,
+                  transition: 'var(--transition-fast)'
                 }}
               >
                 {link.label}
@@ -244,21 +292,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
-        <div style={{ marginTop: 'auto', paddingTop: '2rem' }}>
-          <button 
-            className="btn btn-primary" 
-            style={{ width: '100%' }}
-            onClick={() => handleLinkClick('contact')}
-          >
-            Order Now
-          </button>
-        </div>
       </div>
 
-      {/* Dark overlay for mobile drawer */}
+      {/* Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           onClick={() => setIsMobileMenuOpen(false)}
           style={{
             position: 'fixed',
@@ -273,19 +311,22 @@ const Navbar = () => {
         />
       )}
 
-      {/* Inline styles for responsive Navbar classes (since we use Vanilla CSS) */}
       <style>{`
-        .nav-link-item:hover {
-          color: var(--primary-purple) !important;
+        .menu-btn:hover {
+          background: rgba(158, 42, 140, 0.08) !important;
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(158, 42, 140, 0.12);
         }
 
-        @media (min-width: 1025px) {
-          .desktop-only { display: flex !important; }
-          .mobile-toggle { display: none !important; }
+        .menu-btn:active {
+          transform: scale(0.96);
         }
-        @media (max-width: 1024px) {
-          .desktop-only { display: none !important; }
-          .mobile-toggle { display: block !important; }
+
+        @media (max-width: 480px) {
+          .menu-btn {
+            width: 46px !important;
+            height: 46px !important;
+          }
         }
       `}</style>
     </>

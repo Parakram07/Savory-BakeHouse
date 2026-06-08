@@ -5,49 +5,49 @@ const SchoolSupplyProgram = () => {
   const pillars = [
     {
       num: '01',
-      title: 'Pristine Kitchen & Prep',
-      subtitle: 'Safe, certified, and fresh.',
-      description: 'We prioritize health and cleanliness above all else, ensuring students receive only high-quality items.',
+      title: 'Hygiene & Care',
+      subtitle: 'Fresh, safe, and carefully prepared.',
+      description: 'We follow proper hygiene practices to ensure bakery products are prepared, handled, and packed with care.',
       icon: <ShieldCheck size={28} />,
       color: 'purple',
       badgeColor: 'rgba(158, 42, 140, 0.08)',
       accentColor: 'var(--primary-purple)',
       borderColor: 'rgba(158, 42, 140, 0.25)',
       benefits: [
-        'Hygienic clinical preparation',
-        'Early 4:00 AM daily production',
-        'Certified high-altitude grains'
+        'Hygienic preparation',
+        'Early daily production',
+        'Quality checks before supply'
       ]
     },
     {
       num: '02',
-      title: 'Student-First Nutrition',
-      subtitle: 'Nutritious & bulk-ready.',
-      description: 'Our recipes are tailored for school-aged kids: lower sugar, high fiber, and perfectly portioned.',
+      title: 'Student-Friendly Products',
+      subtitle: 'Fresh bakery items suitable for school needs.',
+      description: 'Our products are prepared in suitable portions for students and regular school supply requirements.',
       icon: <Heart size={28} />,
       color: 'gold',
       badgeColor: 'rgba(255, 199, 44, 0.12)',
       accentColor: 'var(--text-heading)',
       borderColor: 'rgba(255, 199, 44, 0.4)',
       benefits: [
-        'Student-friendly healthy recipes',
-        'Bulk volume baking capacity',
-        'No artificial preservatives'
+        'Student-friendly bakery items',
+        'Bulk production capacity',
+        'Consistent taste and quality'
       ]
     },
     {
       num: '03',
-      title: 'Seamless Logistics',
-      subtitle: 'On-time daily delivery.',
-      description: 'We coordinate coordinates directly with school admins for prompt delivery before the first bell.',
+      title: 'Reliable Delivery',
+      subtitle: 'On-time daily school supply.',
+      description: 'We coordinate with schools to ensure timely delivery and smooth regular supply.',
       icon: <Truck size={28} />,
       color: 'green',
       badgeColor: 'rgba(0, 158, 73, 0.08)',
       accentColor: 'var(--fresh-green)',
       borderColor: 'rgba(0, 158, 73, 0.25)',
       benefits: [
-        'Timely daily morning drops',
-        'Dedicated campus support',
+        'Timely morning delivery',
+        'Dedicated school supply support',
         'Flexible long-term partnerships'
       ]
     }
@@ -123,7 +123,7 @@ const SchoolSupplyProgram = () => {
                   {pillar.icon}
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '1.35rem', margin: 0, fontFamily: 'var(--font-sans)', fontWeight: 700, color: 'var(--text-heading)' }}>
+                  <h3 style={{ fontSize: '1.18rem', margin: 0, fontFamily: 'var(--font-sans)', fontWeight: 700, color: 'var(--text-heading)' }}>
                     {pillar.title}
                   </h3>
                   <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>
