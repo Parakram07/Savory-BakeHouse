@@ -41,13 +41,9 @@ const Navbar = () => {
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 15;
 
-      if (isAtBottom) {
-        matchedSection = 'contact';
-      }
+      if (isAtBottom) matchedSection = 'contact';
 
-      if (matchedSection) {
-        setActiveSection(matchedSection);
-      }
+      if (matchedSection) setActiveSection(matchedSection);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -111,7 +107,6 @@ const Navbar = () => {
             height: '100%'
           }}
         >
-          {/* Logo */}
           <a
             href="#home"
             onClick={(e) => {
@@ -146,7 +141,6 @@ const Navbar = () => {
             />
           </a>
 
-          {/* Right Side Controls */}
           <div
             style={{
               display: 'flex',
@@ -156,7 +150,7 @@ const Navbar = () => {
             }}
           >
             <button
-              className="btn btn-primary btn-sm"
+              className="btn btn-primary btn-sm desktop-touch-btn"
               onClick={() => handleLinkClick('contact')}
               style={{
                 display: 'flex',
@@ -196,7 +190,6 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Menu Drawer */}
       <div
         style={{
           position: 'fixed',
@@ -292,9 +285,23 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <button
+          className="btn btn-primary btn-sm mobile-touch-btn"
+          onClick={() => handleLinkClick('contact')}
+          style={{
+            display: 'none',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '0.35rem',
+            marginTop: '2rem',
+            width: '100%'
+          }}
+        >
+          Get in Touch <ArrowRight size={14} />
+        </button>
       </div>
 
-      {/* Overlay */}
       {isMobileMenuOpen && (
         <div
           onClick={() => setIsMobileMenuOpen(false)}
@@ -326,6 +333,14 @@ const Navbar = () => {
           .menu-btn {
             width: 46px !important;
             height: 46px !important;
+          }
+
+          .desktop-touch-btn {
+            display: none !important;
+          }
+
+          .mobile-touch-btn {
+            display: flex !important;
           }
         }
       `}</style>
