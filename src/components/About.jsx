@@ -175,7 +175,7 @@ const About = () => {
             </h2>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '1.25rem', lineHeight: 1.7 }}>
-              Savory BakeHouse is a bakery manufacturing and distribution company focused on freshness, hygiene, consistency, and reliable supply. We produce bakery products for everyday families and distribute them through local shops, supermarkets, schools, and institutional partners.
+              Savory BakeHouse is a bakery manufacturing and distribution company focused on freshness, hygiene, consistency, and reliable supply. We produce bakery products for everyday families and distribute them to local shops, supermarkets, schools, and institutional partners.
             </p>
 
             <p style={{ fontSize: '1.05rem', color: 'var(--text-body)', marginBottom: '2rem', lineHeight: 1.7 }}>
