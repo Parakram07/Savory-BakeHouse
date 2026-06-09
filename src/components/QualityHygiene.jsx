@@ -237,7 +237,7 @@ const QualityHygiene = () => {
           </div>
 
           <h2 style={{
-            fontSize: 'clamp(2rem, 4vw, 2.9rem)',
+            fontSize: 'clamp(2rem, 4vw, 2.5rem)',
             fontWeight: 800,
             color: 'var(--text-heading)',
             lineHeight: 1.2,

@@ -71,7 +71,7 @@ const SchoolSupplyProgram = () => {
             <GraduationCap size={16} style={{ verticalAlign: 'middle', marginRight: '6px' }} />
             B2B Educational Program
           </span>
-          <h2 style={{ fontSize: '2.75rem', marginTop: '0.5rem' }}>Trusted Bakery Partner for Schools</h2>
+          <h2 style={{ fontSize: '2.5rem', marginTop: '0.5rem' }}>Trusted Bakery Partner for Schools</h2>
           <p style={{ maxWidth: '750px', marginInline: 'auto' }}>
             We supply fresh, hygienic, and student-friendly bakery products to schools and educational institutions. Our School Supply Program is designed for institutions that need safe, consistent, and timely bakery supply.
           </p>
