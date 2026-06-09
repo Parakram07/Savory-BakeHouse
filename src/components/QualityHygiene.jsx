@@ -217,7 +217,7 @@ const QualityHygiene = () => {
           <span style={{
             fontWeight: 700,
             fontSize: '0.9rem',
-            color: 'var(--fresh-green)',
+            color: 'var(--primary-purple)',
             textTransform: 'uppercase',
             letterSpacing: '2px',
             display: 'inline-flex',
@@ -230,7 +230,7 @@ const QualityHygiene = () => {
           </span>
           <h2>
             Clean Production.{' '}
-            <span style={{ color: 'var(--primary-purple)' }}>Consistent Quality.</span>
+            Consistent Quality.
           </h2>
           <p>
             We follow proper hygiene practices and quality control steps throughout our production
