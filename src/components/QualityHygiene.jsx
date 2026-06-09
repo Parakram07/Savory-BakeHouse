@@ -204,70 +204,35 @@ const QualityHygiene = () => {
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
 
-        {/* ── Section Header ── */}
         <div
           ref={headerRef}
+          className="section-header"
           style={{
-            textAlign: 'center',
             maxWidth: '720px',
-            margin: '0 auto 4.5rem auto',
             opacity: headerVisible ? 1 : 0,
             transform: headerVisible ? 'translateY(0)' : 'translateY(28px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
-          {/* Eyebrow label */}
-          <div style={{
+          <span style={{
+            fontWeight: 700,
+            fontSize: '0.9rem',
+            color: 'var(--fresh-green)',
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            backgroundColor: 'rgba(0,158,73,0.08)',
-            border: '1px solid rgba(0,158,73,0.15)',
-            padding: '0.4rem 1.2rem',
-            borderRadius: '999px',
-            color: '#009E49',
-            fontWeight: 700,
-            fontSize: '0.82rem',
-            textTransform: 'uppercase',
-            letterSpacing: '1.2px',
-            marginBottom: '1.5rem',
+            marginBottom: '0.5rem',
           }}>
             <ShieldCheck size={14} />
             Our Standards
-          </div>
-
-          <h2 style={{
-            fontSize: 'clamp(2rem, 4vw, 2.5rem)',
-            fontWeight: 800,
-            color: 'var(--text-heading)',
-            lineHeight: 1.2,
-            marginBottom: '1.25rem',
-            fontFamily: 'var(--font-serif)',
-          }}>
+          </span>
+          <h2>
             Clean Production.{' '}
             <span style={{ color: 'var(--primary-purple)' }}>Consistent Quality.</span>
           </h2>
-
-          {/* Divider */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.75rem',
-            marginBottom: '1.5rem',
-          }}>
-            <div style={{ height: '2px', width: '40px', background: 'var(--secondary-gold)', borderRadius: '2px' }} />
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary-purple)' }} />
-            <div style={{ height: '2px', width: '40px', background: 'var(--secondary-gold)', borderRadius: '2px' }} />
-          </div>
-
-          <p style={{
-            fontSize: '1.08rem',
-            color: 'var(--text-body)',
-            lineHeight: 1.75,
-            maxWidth: '640px',
-            margin: '0 auto',
-          }}>
+          <p>
             We follow proper hygiene practices and quality control steps throughout our production
             process. From ingredient handling to baking, packaging, and delivery, our focus is to
             provide fresh and safe bakery products with consistent quality.
