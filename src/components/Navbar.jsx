@@ -14,6 +14,7 @@ const Navbar = () => {
     { id: 'products', label: 'Our Products' },
     { id: 'school-supply', label: 'School Supply' },
     { id: 'retail-partner', label: 'Retail Partner' },
+    { id: 'quality-hygiene', label: 'Quality & Hygiene' },
     { id: 'contact', label: 'Contact Us' }
   ];
 

@@ -10,6 +10,7 @@ import Products from './components/Products';
 
 import SchoolSupplyProgram from './components/SchoolSupplyProgram';
 import RetailPartnerProgram from './components/RetailPartnerProgram';
+import QualityHygiene from './components/QualityHygiene';
 import CeoMessage from './components/CeoMessage';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -42,6 +43,9 @@ function App() {
         <SchoolSupplyProgram />
         {/* Retail Partner Program Section */}
         <RetailPartnerProgram />
+
+        {/* Quality & Hygiene Standards Section */}
+        <QualityHygiene />
 
         {/* Auto-playing Testimonials Review Slider */}
         <CeoMessage />
